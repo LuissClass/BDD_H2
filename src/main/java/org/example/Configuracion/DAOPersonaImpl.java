@@ -9,7 +9,7 @@ import java.util.List;
 
 public class DAOPersonaImpl implements DAOPersona {
     private Connection conexion = null;
-    private String nameDb = "testdb";
+    private String nameDb = "BDPRUEBA";
 
     public DAOPersonaImpl(Connection con) {
         this.conexion = con;
