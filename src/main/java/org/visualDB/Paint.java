@@ -32,7 +32,7 @@ public class Paint extends JFrame {
 
         add(panel);
         pack();
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
 
         addWindowListener(new WindowAdapter() {
@@ -40,6 +40,7 @@ public class Paint extends JFrame {
             public void windowClosing(WindowEvent e) {
                 System.out.println("Guardando...");
                 lienzo.guardar();
+                dispose();
             }
         });
     }

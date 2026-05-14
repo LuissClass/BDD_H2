@@ -9,15 +9,17 @@ public class PanelDibujo extends JPanel {
     private DatosService ds;
 
     private boolean dibujando = false;
-    private ArrayList<Point> puntos = new ArrayList<>();
+    private ArrayList<Point> puntos;
     private int limitePuntos;
 
     public PanelDibujo(DatosService ds) {
         this.ds = ds;
 
-        //todo exepciones
         ds.cargarPuntos();
         puntos = ds.puntos;
+        limitePuntos = puntos.size();
+
+        repaint();
 
         setPreferredSize(new Dimension(600, 400));
         setBackground(Color.GREEN);
@@ -106,6 +108,6 @@ public class PanelDibujo extends JPanel {
     }
 
     public  void guardar() {
-        ds.guardarPuntos(puntos);
+        ds.guardarPuntos(puntos, limitePuntos);
     }
 }
