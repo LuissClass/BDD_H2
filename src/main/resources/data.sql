@@ -18,3 +18,5 @@ INSERT INTO TAREA (descripcion, completada) VALUES ('Enviar informe semanal', tr
 INSERT INTO TAREA (descripcion, completada) VALUES ('Arreglar la persiana del salón', false);
 INSERT INTO TAREA (descripcion, completada) VALUES ('Cargar la batería de la cámara', true);
 INSERT INTO TAREA (descripcion, completada) VALUES ('Planear las vacaciones de verano', false);
+
+
